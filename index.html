@@ -88,7 +88,94 @@
         </ul>
       </nav>
     </header>
+    <style>
+      button, button::after {
+        width: 380px;
+        height: 86px;
+        font-size: 36px;
+        font-family: 'Bebas Neue', cursive;
+        background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+        border: 0;
+        color: #fff;
+        letter-spacing: 3px;
+        line-height: 88px;
+        box-shadow: 6px 0px 0px #EDBB00;
+        outline: transparent;
+        position: relative;
+      }
 
+      button::after {
+        --slice-0: inset(50% 50% 50% 50%);
+        --slice-1: inset(80% -6px 0 0);
+        --slice-2: inset(50% -6px 30% 0);
+        --slice-3: inset(10% -6px 85% 0);
+        --slice-4: inset(40% -6px 43% 0);
+        --slice-5: inset(80% -6px 5% 0);
+
+        content: 'AVAILABLE NOW';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, transparent 3%, #EDBB00 3%, #EDBB00 5%, #FF013C 5%);
+        text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #EDBB00;
+        clip-path: var(--slice-0);
+      }
+
+      button:hover::after {
+        animation: 1s glitch;
+        animation-timing-function: steps(2, end);
+      }
+
+      @keyframes glitch {
+        0% {
+          clip-path: var(--slice-1);
+          transform: translate(-20px, -10px);
+        }
+        10% {
+          clip-path: var(--slice-3);
+          transform: translate(10px, 10px);
+        }
+        20% {
+          clip-path: var(--slice-1);
+          transform: translate(-10px, 10px);
+        }
+        30% {
+          clip-path: var(--slice-3);
+          transform: translate(0px, 5px);
+        }
+        40% {
+          clip-path: var(--slice-2);
+          transform: translate(-5px, 0px);
+        }
+        50% {
+          clip-path: var(--slice-3);
+          transform: translate(5px, 0px);
+        }
+        60% {
+          clip-path: var(--slice-4);
+          transform: translate(5px, 10px);
+        }
+        70% {
+          clip-path: var(--slice-2);
+          transform: translate(-10px, 10px);
+        }
+        80% {
+          clip-path: var(--slice-5);
+          transform: translate(20px, -10px);
+        }
+        90% {
+          clip-path: var(--slice-1);
+          transform: translate(-10px, 0px);
+        }
+        100% {
+          clip-path: var(--slice-1);
+          transform: translate(0);
+        }
+      }
+    </style>
     <main role="main">
       <article id="webslides" class="vertical">
         <!-- Quick Guide
@@ -104,14 +191,7 @@
             <h1 style="color: white"><strong>FC BARCELONA</strong></h1>
             <p class="text-intro" style="color: white">Més que un club.
             </p>
-            <p>
-              <a href="https://webslides.tv/webslides-latest.zip" class="button zoomIn" title="Download WebSlides for free">
-                <svg class="fa-cloud-download">
-                  <use xlink:href="#fa-cloud-download"></use>
-                </svg>
-                WebSlides
-              </a>
-            </p>
+            <button><a href="https://www.fcbarcelona.es/es/">Know more</a></button>
           </div>
           <!-- .end .wrap -->
         </section>
@@ -173,7 +253,9 @@
                 <div>
                   <h2 style="color: #004D98">
                     <span><img src="https://pbs.twimg.com/media/E8C3B86X0AEzi4n?format=jpg&name=small" alt="" width="500" height="600"></span>
-                    Lionel Messi
+
+                    <a href="https://messi.com/">Lionel Messi</a>
+
                   </h2>
                 </div>
               </li>
@@ -181,7 +263,7 @@
                 <div>
                   <h2 style="color: #004D98">
                   <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xb65WHgWWg3aOPe8M6Y34ug7-CCTcx464sbibckiUkh2hJrVAkEwpDp3tEmTBxYxJSk&usqp=CAU" width="500px" height="600px" alt="" ></span>
-                    Xavi Hernández
+                    <a href="https://es.wikipedia.org/wiki/Xavi_Hern%C3%A1ndez">Xavi Hernández</a>
                   </h2>
                 </div>
               </li>
@@ -189,7 +271,7 @@
                 <div>
                   <h2 style="color: #004D98">
                     <span><img src="https://pbs.twimg.com/profile_images/880014123785998336/GYLppyjs_400x400.jpg" alt="" width="500" height="600"></span>
-                    Carles Puyol
+                    <a href="https://es.wikipedia.org/wiki/Carles_Puyol">Carlos Puyol</a>
                   </h2>
                 </div>
               </li>
@@ -197,7 +279,7 @@
                 <div>
                   <h2 style="color: #004D98">
                     <span><img src="https://www.soyfutbol.com/__export/1644933530455/sites/debate/img/2022/02/15/iniesta_hd_crop1644933529957.jpg_423682103.jpg" alt="" width="500" height="600"></span>
-                    Andrés Iniesta
+                    <a href="https://www.andresiniesta.es/">Andres Iniesta</a>
                   </h2>
                 </div>
               </li>
@@ -205,7 +287,7 @@
                 <div>
                   <h2 style="color: #004D98">
                     <span><img src="https://www.soyfutbol.com/__export/1605105293886/sites/debate/img/2020/11/11/neyar_barcelona_demanda_10_millones_crop1605105252561.jpg_1797783192.jpg" alt="" width="500" height="600"></span>
-                    Neymar Junior
+                    <a href="https://es.wikipedia.org/wiki/Neymar">Neymar Junior</a>
                   </h2>
 
                 </div>
@@ -214,7 +296,7 @@
                 <div>
                   <h2 style="color: #004D98">
                     <span><img src="https://www.soyfutbol.com/__export/1651850399484/sites/debate/img/2022/05/06/luis_s_uarez.jpg_943222218.jpg" alt="" width="500" height="600"></span>
-                    Luis Suárez
+                    <a href="https://es.wikipedia.org/wiki/Luis_Su%C3%A1rez_(futbolista)">Luis Suárez</a>
                   </h2>
 
                 </div>
